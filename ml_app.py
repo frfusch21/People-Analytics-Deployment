@@ -44,7 +44,7 @@ def load_model(model_file):
     return loaded_model
 
 def run_ml_app():
-    st.subheader("ML section")
+    st.subheader("ML section") #<h4> html
 
     with st.expander("Attribute Info"):
         st.markdown(attribute_info)
@@ -113,6 +113,8 @@ def run_ml_app():
 
     ## prediction section
     st.subheader('Prediction Result')
+    
+    # Decode
     single_sample = np.array(encoded_result).reshape(1,-1)
     # st.write(single_sample)
 
