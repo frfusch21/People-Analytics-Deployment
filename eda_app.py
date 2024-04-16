@@ -9,7 +9,7 @@ matplotlib.use('Agg')
 import seaborn as sns
 import plotly.express as px
 
-@st.cache_data
+@st.cache
 def load_data(data):
     df = pd.read_csv(data)
     df = df.iloc[:,1:]
@@ -84,5 +84,5 @@ def run_eda_app():
             st.pyplot(fig)
 
     else:
-        st.write("Gorila Coklat")
+        st.write("Human Capital")
 
