@@ -38,7 +38,8 @@ def get_value(val,my_dict):
         if val == key:
             return value
 
-@st.cache_data
+# @st.cache_data
+@st.cache
 def load_model(model_file):
     loaded_model = joblib.load(open(os.path.join(model_file),'rb'))
     return loaded_model
@@ -113,7 +114,7 @@ def run_ml_app():
 
     ## prediction section
     st.subheader('Prediction Result')
-    
+
     # Decode
     single_sample = np.array(encoded_result).reshape(1,-1)
     # st.write(single_sample)
